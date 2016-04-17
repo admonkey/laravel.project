@@ -11,20 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    //return "Hello World!";
-    $people = ['Taylor', 'Matt', 'Jeff'];
-    //$people = [];
-    //return view('welcome', ['people' => $people]);
+// Route::get('/', function () {
+//     //return view('welcome');
+//     //return "Hello World!";
+//     $people = ['Taylor', 'Matt', 'Jeff'];
+//     //$people = [];
+//     //return view('welcome', ['people' => $people]);
+// 
+//     //return View::make();
+//     //return view('welcome', []);
+//     return view('welcome', compact('people'));
+//     //return view('welcome')->with('people',$people);
+//     //return view('welcome')->withPeople($people);
+// });
 
-    //return View::make();
-    //return view('welcome', []);
-    return view('welcome', compact('people'));
-    //return view('welcome')->with('people',$people);
-    //return view('welcome')->withPeople($people);
-});
+Route::get('/','PagesController@home');
 
+/*
 Route::get('about', function () {
-    return view('pages.about'); // resources/views/pages/about.blade.php
-});
+    return view('page.about'); // resources/views/pages/about.blade.php
+});*/
+
+Route::get('about','PagesController@about');
