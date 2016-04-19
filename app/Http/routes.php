@@ -33,3 +33,18 @@ Route::get('about', function () {
 });*/
 
 Route::get('about','PagesController@about');
+
+Route::get('cards', 'CardsController@index');
+/*
+Route::get('cards/create', 'CardsController@create');
+
+Route::post('cards', 'CardsController@store');
+
+Route::get('cards/1', 'CardsController@show');
+
+Route::get('cards/1/edit', 'CardsController@edit');
+
+Route::put('cards/1', 'CardsController@update');
+
+Route::delete('cards/1', 'CardsController@destroy');
+*/
