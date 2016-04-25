@@ -26,7 +26,18 @@ return [
     |
     */
 
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+
     'default' => env('DB_CONNECTION', 'sqlite'),
+
+    /*
+      sudo apt-get install php5-sqlite
+      sudo service apache2 restart
+
+      # change .env
+      DB_CONNECTION=sqlite
+      DB_DATABASE=database/database.sqlite
+    */
 
     /*
     |--------------------------------------------------------------------------
@@ -49,6 +60,7 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            //'database' => database_path('database.sqlite'),
             'prefix' => '',
         ],
 
