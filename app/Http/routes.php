@@ -48,3 +48,6 @@ Route::put('cards/1', 'CardsController@update');
 
 Route::delete('cards/1', 'CardsController@destroy');
 */
+
+// in order for type hinting to work, wildard {wildcard} must match controller var name
+Route::get('cards/{card}', 'CardsController@show');
